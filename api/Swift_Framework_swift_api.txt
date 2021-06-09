@@ -1,0 +1,15 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.4 (swiftlang-1205.0.26.9 clang-1205.0.19.55)
+// swift-module-flags: -target arm64-apple-ios14.5-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -Onone -module-name Swift_Framework
+import Swift
+@_exported import Swift_Framework
+public struct SStruct {
+  public var integer: Swift.Int
+}
+@objc @_inheritsConvenienceInitializers public class SClass : ObjectiveC.NSObject {
+  @objc public func getInt() -> Swift.Int
+  @objc public func intToString(_ int: Swift.Int) -> Swift.String
+  @objc public func tryIntToString(_ int: Swift.Int) -> Swift.String?
+  @objc override dynamic public init()
+  @objc deinit
+}

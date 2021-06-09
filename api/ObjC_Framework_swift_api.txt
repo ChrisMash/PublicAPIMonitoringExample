@@ -1,0 +1,20 @@
+Welcome to Apple Swift version 5.4 (swiftlang-1205.0.26.9 clang-1205.0.19.55).
+Type :help for assistance.
+@_inheritsConvenienceInitializers @objc class OCClass : ObjectiveC.NSObject {
+  @discardableResult @objc func getInt() -> Swift.Int
+  @discardableResult @objc func intToString(with integer: Swift.Int) -> Swift.String
+  @available(swift, obsoleted: 3, renamed: "intToString(with:)") @objc func intToStringWith(_ integer: Swift.Int) -> Swift.String
+  @discardableResult @objc func tryIntToString(with integer: Swift.Int) -> Swift.String?
+  @available(swift, obsoleted: 3, renamed: "tryIntToString(with:)") @objc func tryIntToStringWith(_ integer: Swift.Int) -> Swift.String?
+  @objc override init()
+}
+struct OCStruct {
+  var integer: Swift.Int
+  init() {
+
+    return
+  }
+  init(integer: Swift.Int)
+}
+var ObjC_FrameworkVersionNumber: Swift.Double
+
