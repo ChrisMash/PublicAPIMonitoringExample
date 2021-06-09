@@ -1,3 +1,16 @@
+#
+# Generates the Swift API from the specific framework and places it in the specified directory
+# with the filename <FRAMEWORK_NAME>_swift_api.txt
+#
+# NOTE: Intended for use with ObjC frameworks, your mileage may vary for Swift frameworks.
+#
+# Parameters:
+# - The name of the framework (without extension)
+# - The path to the framework file
+# - The directory to output the file to
+# e.g. sh gen_swift_api_from_objc_framework.sh ObjC_Framework ./ ./api
+#
+
 FRAMEWORK_NAME=$1
 FRAMEWORK_DIR=$2
 OUTPUT_DIR=$3

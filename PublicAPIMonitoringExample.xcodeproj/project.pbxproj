@@ -241,7 +241,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "sh scripts/copy_swiftinterface_from_swift_framework.sh $PRODUCT_NAME $BUILT_PRODUCTS_DIR $NATIVE_ARCH \"api/\"\n";
+			shellScript = "sh scripts/copy_swiftinterface_from_swift_framework.sh $FULL_PRODUCT_NAME $BUILT_PRODUCTS_DIR $NATIVE_ARCH \"api/\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
