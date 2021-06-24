@@ -1,0 +1,21 @@
+
+FOUNDATION_EXPORT double ObjC_FrameworkVersionNumber;
+FOUNDATION_EXPORT const unsigned char ObjC_FrameworkVersionString[];
+typedef NSWindow XPWindow;
+typedef UIWindow XPWindow;
+@interface OCClass : NSObject
+- (NSInteger)getInt;
+- (NSString* _Nonnull)intToStringWith:(NSInteger)integer;
+- (NSString* _Nullable)tryIntToStringWith:(NSInteger)integer;
+- (XPWindow* _Nonnull)getWindow;
+- (void)macFunction;
+- (void)iOSFunction;
+@end
+typedef NS_ENUM(NSUInteger, EnumValue) {
+    kOne,
+    kTwo,
+    kThree
+};
+struct OCStruct {
+    enum EnumValue enumValue;
+};

@@ -5,7 +5,11 @@
 //  Created by Chris Mash on 08/06/2021.
 //
 
+/**
+ This is my awesome Swift class
+ */
 public class SClass: NSObject {
+    /// This is my awesome Swift function
     @objc public func getInt() -> Int {
         return 1
     }

@@ -124,6 +124,7 @@
 				0C1F18FB267001DE0063AEB0 /* Frameworks */,
 				0C1F18FC267001DE0063AEB0 /* Resources */,
 				0C1F191C267002770063AEB0 /* Export Swift API */,
+				0C1F193C2670FF9C0063AEB0 /* Export ObjC API */,
 			);
 			buildRules = (
 			);
@@ -143,6 +144,7 @@
 				0C1F190D267001EA0063AEB0 /* Frameworks */,
 				0C1F190E267001EA0063AEB0 /* Resources */,
 				0C1F19282670DAC50063AEB0 /* Copy .swiftinterface */,
+				0C1F193D267100340063AEB0 /* Export ObjC API */,
 			);
 			buildRules = (
 			);
@@ -240,8 +242,44 @@
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "sh scripts/copy_swiftinterface_from_swift_framework.sh $FULL_PRODUCT_NAME $BUILT_PRODUCTS_DIR $NATIVE_ARCH \"api/\"\n";
+			shellPath = /bin/bash;
+			shellScript = "bash scripts/copy_swiftinterface_from_swift_framework.sh $FULL_PRODUCT_NAME $BUILT_PRODUCTS_DIR $NATIVE_ARCH \"api/\"\n";
+		};
+		0C1F193C2670FF9C0063AEB0 /* Export ObjC API */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Export ObjC API";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/bash;
+			shellScript = "bash scripts/gen_objc_api_from_objc_framework.sh $FULL_PRODUCT_NAME $BUILT_PRODUCTS_DIR \"api/\"\n";
+		};
+		0C1F193D267100340063AEB0 /* Export ObjC API */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Export ObjC API";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/bash;
+			shellScript = "bash scripts/gen_objc_api_from_swift_framework.sh $FULL_PRODUCT_NAME $BUILT_PRODUCTS_DIR \"api/\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -453,6 +491,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.chrismash.Swift-Framework";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;

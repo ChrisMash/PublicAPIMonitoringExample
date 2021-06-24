@@ -1,20 +1,52 @@
 Welcome to Apple Swift version 5.4 (swiftlang-1205.0.26.9 clang-1205.0.19.55).
 Type :help for assistance.
+@objc enum EnumValue : Swift.UInt {
+  init?(rawValue: Swift.UInt) {
+
+    return
+  }
+  var rawValue: Swift.UInt {
+    get {
+      return 
+    }
+  }
+  typealias RawValue = Swift.UInt
+  case one
+  @available(swift, obsoleted: 3, renamed: "one") static var One: ObjC_Framework.EnumValue {
+    get {
+      return 
+    }
+  }
+  case two
+  @available(swift, obsoleted: 3, renamed: "two") static var Two: ObjC_Framework.EnumValue {
+    get {
+      return 
+    }
+  }
+  case three
+  @available(swift, obsoleted: 3, renamed: "three") static var Three: ObjC_Framework.EnumValue {
+    get {
+      return 
+    }
+  }
+}
 @_inheritsConvenienceInitializers @objc class OCClass : ObjectiveC.NSObject {
   @discardableResult @objc func getInt() -> Swift.Int
   @discardableResult @objc func intToString(with integer: Swift.Int) -> Swift.String
   @available(swift, obsoleted: 3, renamed: "intToString(with:)") @objc func intToStringWith(_ integer: Swift.Int) -> Swift.String
   @discardableResult @objc func tryIntToString(with integer: Swift.Int) -> Swift.String?
   @available(swift, obsoleted: 3, renamed: "tryIntToString(with:)") @objc func tryIntToStringWith(_ integer: Swift.Int) -> Swift.String?
+  @discardableResult @objc func getWindow() -> AppKit.NSWindow
+  @objc func macFunction()
   @objc override init()
 }
 struct OCStruct {
-  var integer: Swift.Int
+  var enumValue: ObjC_Framework.EnumValue
   init() {
 
     return
   }
-  init(integer: Swift.Int)
+  init(enumValue: ObjC_Framework.EnumValue)
 }
 var ObjC_FrameworkVersionNumber: Swift.Double
 

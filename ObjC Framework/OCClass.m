@@ -21,4 +21,14 @@
     return NULL;
 }
 
+- (XPWindow*)getWindow {
+    return [XPWindow new];
+}
+
+#if TARGET_OS_MAC && !TARGET_OS_IPHONE
+- (void)macFunction {}
+#else
+- (void)iOSFunction {}
+#endif
+
 @end

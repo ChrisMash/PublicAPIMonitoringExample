@@ -16,4 +16,3 @@ FOUNDATION_EXPORT const unsigned char ObjC_FrameworkVersionString[];
 // In this header, you should import all the public headers of your framework using statements like #import <ObjC_Framework/PublicHeader.h>
 
 #import "OCClass.h"
-#import "OCStruct.h"

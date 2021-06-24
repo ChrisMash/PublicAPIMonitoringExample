@@ -8,8 +8,14 @@
 #ifndef OCStruct_h
 #define OCStruct_h
 
+typedef NS_ENUM(NSUInteger, EnumValue) {
+    kOne,
+    kTwo,
+    kThree
+};
+
 struct OCStruct {
-    NSInteger integer;
+    enum EnumValue enumValue;
 };
 
 #endif /* OCStruct_h */
