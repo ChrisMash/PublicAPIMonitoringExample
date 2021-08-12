@@ -1,4 +1,6 @@
 #
+# https://github.com/ChrisMash/PublicAPIMonitoringExample
+#
 # Copies the specified .swiftinterface file from the specified Swift framework and places it in
 # the specified directory with the filename <FRAMEWORK_NAME>_swift_api.txt
 #
